@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockage - 歯科医院 在庫管理アプリ</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f5f7;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1d1d1f;
+        }
+        header p {
+            color: #86868b;
+            font-size: 1.1em;
+        }
+        .nav-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .nav-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .nav-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            text-decoration: none;
+        }
+        .nav-card h2 {
+            font-size: 1.2em;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+        }
+        .nav-card p {
+            color: #86868b;
+            font-size: 0.9em;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .card h2 {
+            font-size: 1.2em;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+        .card p {
+            color: #515154;
+            font-size: 0.95em;
+        }
+        .badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            color: #86868b;
+            font-size: 0.85em;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e5e7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stockage</h1>
+            <p>Stock + Storage</p>
+            <p style="margin-top:4px;">歯科医院 在庫管理アプリ</p>
+        </header>
+
+        <div class="card" style="text-align:center; margin-bottom:32px;">
+            <p>歯科医院の在庫管理を効率化するmacOSアプリケーションです。商品管理・入出庫・発注・棚卸・帳票出力まで、日々の在庫業務をシンプルに支援します。</p>
+            <br>
+            <p><span class="badge">iCloud同期対応</span> <span class="badge">macOS 14.0+</span> <span class="badge">App Store</span></p>
+        </div>
+
+        <div class="nav-cards">
+            <a href="./support/" class="nav-card">
+                <h2>サポート</h2>
+                <p>使い方・FAQ・お問い合わせ</p>
+            </a>
+            <a href="./privacy/" class="nav-card">
+                <h2>プライバシーポリシー</h2>
+                <p>情報の取り扱いについて</p>
+            </a>
+        </div>
+
+        <footer>
+            <p>Copyright &copy; 2026 Stockage開発チーム. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - Stockage</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f5f7;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        header h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        header p {
+            color: #86868b;
+            font-size: 1.1em;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .card h2 {
+            font-size: 1.2em;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+        .card p, .card li {
+            color: #515154;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        .card ul {
+            padding-left: 20px;
+        }
+        .card ul li {
+            margin-bottom: 6px;
+        }
+        .highlight {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        footer {
+            text-align: center;
+            color: #86868b;
+            font-size: 0.85em;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e5e7;
+        }
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>プライバシーポリシー</h1>
+            <p>Stockage（歯科医院 在庫管理）</p>
+        </header>
+
+        <p style="text-align:center; color:#86868b; margin-bottom:32px;">最終更新日: 2026年3月15日</p>
+
+        <!-- はじめに -->
+        <div class="card">
+            <h2>はじめに</h2>
+            <p>Stockage開発チーム（以下「当チーム」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシーは、macOSアプリケーション「Stockage」（以下「本アプリ」）における情報の取り扱いについて説明するものです。</p>
+        </div>
+
+        <!-- 情報の収集 -->
+        <div class="card">
+            <h2>情報の収集について</h2>
+            <div class="highlight">本アプリは、ユーザーの個人情報を一切収集しません。</div>
+            <p>具体的には、以下の情報を収集・送信・保存することはありません：</p>
+            <ul>
+                <li>氏名、メールアドレス、電話番号等の個人識別情報</li>
+                <li>位置情報</li>
+                <li>デバイス識別子</li>
+                <li>使用状況データ・アナリティクス</li>
+                <li>広告識別子</li>
+            </ul>
+        </div>
+
+        <!-- データの保存 -->
+        <div class="card">
+            <h2>データの保存について</h2>
+            <p>本アプリで扱うデータ（商品情報、在庫数、仕入先情報、操作履歴など）は以下の場所にのみ保存されます：</p>
+            <ul>
+                <li><strong>ローカルストレージ:</strong> ユーザーのMac内のアプリケーション固有の領域（サンドボックス内）に保存されます。</li>
+                <li><strong>iCloud（CloudKit）:</strong> iCloud同期が有効な場合、ユーザーのiCloudアカウントのプライベートデータベースに保存されます。このデータには当チームを含む第三者はアクセスできません。</li>
+            </ul>
+        </div>
+
+        <!-- サードパーティ -->
+        <div class="card">
+            <h2>サードパーティとの共有について</h2>
+            <p>本アプリは第三者にデータを提供・共有・販売することはありません。サードパーティのSDK、アナリティクスツール、広告フレームワークは一切使用していません。</p>
+        </div>
+
+        <!-- バックアップ・エクスポート -->
+        <div class="card">
+            <h2>バックアップ・エクスポート機能について</h2>
+            <ul>
+                <li><strong>バックアップ:</strong> アプリ内のバックアップ機能で作成されるファイル（JSON形式）は、ユーザーが指定したローカルフォルダにのみ保存されます。</li>
+                <li><strong>CSVエクスポート:</strong> 書き出されるCSVファイルは、ユーザーが指定したローカルフォルダにのみ保存されます。</li>
+                <li><strong>PDF帳票:</strong> 生成されるPDFファイルは、ユーザーが指定したローカルフォルダにのみ保存されます。</li>
+            </ul>
+            <p>エクスポートされたデータの管理・保護はユーザーの責任において行ってください。</p>
+        </div>
+
+        <!-- Apple API -->
+        <div class="card">
+            <h2>Apple プライバシー API の使用について</h2>
+            <p>本アプリは以下のApple APIを使用しています：</p>
+            <ul>
+                <li><strong>ファイルタイムスタンプAPI:</strong> ファイルの更新日時を取得するために使用します（理由コード: C617.1）</li>
+            </ul>
+        </div>
+
+        <!-- 利用対象 -->
+        <div class="card">
+            <h2>利用対象について</h2>
+            <p>本アプリは歯科医院向けの業務用アプリケーションであり、13歳未満のお子様を対象としていません。13歳未満のお子様から意図的に個人情報を収集することはありません。</p>
+        </div>
+
+        <!-- 変更 -->
+        <div class="card">
+            <h2>プライバシーポリシーの変更について</h2>
+            <p>本プライバシーポリシーは予告なく変更されることがあります。変更があった場合は、本ページの最終更新日を更新します。</p>
+        </div>
+
+        <!-- お問い合わせ -->
+        <div class="card">
+            <h2>お問い合わせ</h2>
+            <p>プライバシーに関するご質問やご懸念がありましたら、以下までご連絡ください：</p>
+            <ul>
+                <li><strong>メール:</strong> <a href="mailto:support@greenhills-dc.org">support@greenhills-dc.org</a></li>
+                <li><strong>提供元:</strong> Stockage開発チーム</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Copyright &copy; 2026 Stockage開発チーム. All rights reserved.</p>
+            <p><a href="../support/">Stockage サポート</a></p>
+        </footer>
+    </div>
+</body>
+</html>

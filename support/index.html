@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockage サポート</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f5f7;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        header h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        header p {
+            color: #86868b;
+            font-size: 1.1em;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .card h2 {
+            font-size: 1.3em;
+            margin-bottom: 16px;
+            color: #1d1d1f;
+        }
+        .card p, .card li {
+            color: #515154;
+            margin-bottom: 8px;
+        }
+        .card ul {
+            padding-left: 20px;
+        }
+        .card ul li {
+            margin-bottom: 6px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5e5e7;
+            padding: 16px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item h3 {
+            font-size: 1em;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+        }
+        .faq-item p {
+            color: #86868b;
+            font-size: 0.95em;
+        }
+        .contact-info {
+            text-align: center;
+            padding: 24px;
+        }
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            color: #86868b;
+            font-size: 0.85em;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e5e7;
+        }
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stockage</h1>
+            <p>歯科医院 在庫管理アプリ</p>
+        </header>
+
+        <!-- アプリ概要 -->
+        <div class="card">
+            <h2>アプリについて</h2>
+            <p>Stockage（Stock + Storage）は、歯科医院の在庫管理を効率化するmacOSアプリケーションです。商品管理・入出庫・倉庫間移動・発注・棚卸・CSV入出力・PDF帳票出力など、日々の在庫業務をシンプルに支援します。</p>
+            <br>
+            <p><span class="badge">iCloud同期対応</span> ログイン不要。データはお使いのMacとiCloudにのみ保存され、外部サーバーへの送信は行いません。</p>
+        </div>
+
+        <!-- 動作環境 -->
+        <div class="card">
+            <h2>動作環境</h2>
+            <ul>
+                <li>macOS 14.0 (Sonoma) 以降</li>
+                <li>iCloud同期にはApple IDでのiCloudサインインが必要です</li>
+            </ul>
+        </div>
+
+        <!-- よくある質問 -->
+        <div class="card">
+            <h2>よくある質問</h2>
+
+            <div class="faq-item">
+                <h3>Q. ログインは必要ですか？</h3>
+                <p>いいえ。本アプリにログイン機能はありません。インストール後すぐにお使いいただけます。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q. データはどこに保存されますか？</h3>
+                <p>データはお使いのMac内（アプリのサンドボックス領域）に保存されます。iCloud同期が有効な場合は、ご自身のiCloudアカウントのプライベートデータベースにも保存されます。外部サーバーへの送信は一切行いません。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q. 複数のMacで同期できますか？</h3>
+                <p>はい。同じApple IDでiCloudにサインインしたMac間で、iCloud（CloudKit）を通じてデータが自動同期されます。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q. バックアップはどうすればいいですか？</h3>
+                <p>アプリ内のバックアップ機能からJSON形式でデータを書き出せます。書き出したファイルはお好みの場所に保存・管理してください。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q. CSVでデータのインポート・エクスポートはできますか？</h3>
+                <p>はい。商品一覧や在庫データのCSVインポート・エクスポートに対応しています。既存の在庫管理データからの移行にもご利用いただけます。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q. 発注書や棚卸表をPDFで出力できますか？</h3>
+                <p>はい。発注書・棚卸表などの各種帳票をPDF形式で出力できます。</p>
+            </div>
+        </div>
+
+        <!-- お問い合わせ -->
+        <div class="card contact-info">
+            <h2>お問い合わせ</h2>
+            <p>ご不明な点やご要望がありましたら、お気軽にご連絡ください。</p>
+            <br>
+            <p><a href="mailto:support@greenhills-dc.org">support@greenhills-dc.org</a></p>
+        </div>
+
+        <footer>
+            <p>Copyright &copy; 2026 Stockage開発チーム. All rights reserved.</p>
+            <p><a href="../privacy/">プライバシーポリシー</a></p>
+        </footer>
+    </div>
+</body>
+</html>
