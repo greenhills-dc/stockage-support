@@ -47,6 +47,9 @@
             color: inherit;
             transition: transform 0.2s, box-shadow 0.2s;
         }
+        .nav-card:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+        }
         .nav-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.12);
@@ -118,6 +121,10 @@
             <a href="./privacy" class="nav-card">
                 <h2>プライバシーポリシー</h2>
                 <p>情報の取り扱いについて</p>
+            </a>
+            <a href="./cases" class="nav-card">
+                <h2>運用事例</h2>
+                <p>開発医院の毎日の運用と、iPad 1 台からの始め方</p>
             </a>
         </div>
 

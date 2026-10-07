@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockage - 運用事例</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f5f7;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        header h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        header p {
+            color: #86868b;
+            font-size: 1.1em;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .card h2 {
+            font-size: 1.3em;
+            margin-bottom: 16px;
+            color: #1d1d1f;
+        }
+        .card h3 {
+            font-size: 1.05em;
+            color: #1d1d1f;
+            margin: 24px 0 8px;
+        }
+        .card h4 {
+            font-size: 0.95em;
+            color: #1d1d1f;
+            margin: 16px 0 6px;
+        }
+        .card p, .card li {
+            color: #515154;
+            margin-bottom: 8px;
+        }
+        .card ul {
+            padding-left: 20px;
+        }
+        .card ul li {
+            margin-bottom: 6px;
+        }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 8px 0 8px;
+        }
+        .card table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92em;
+            color: #515154;
+        }
+        .card th, .card td {
+            border: 1px solid #e5e5e7;
+            padding: 8px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .card th {
+            background: #f5f5f7;
+            color: #1d1d1f;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5e5e7;
+            padding: 16px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item h3 {
+            font-size: 1em;
+            color: #1d1d1f;
+            margin: 0 0 8px;
+        }
+        .faq-item p, .faq-item li {
+            color: #86868b;
+            font-size: 0.95em;
+        }
+        footer {
+            text-align: center;
+            color: #86868b;
+            font-size: 0.85em;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e5e7;
+        }
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>運用事例</h1>
+            <p>Stockage 歯科医院 在庫管理アプリ</p>
+        </header>
+
+        <div class="card">
+            <p>Stockage を実際の歯科医院でどのように使っているかを紹介します。毎日すべての在庫を数える必要はありません。「誰が・いつ・何を入力するか」を決めておけば、少ない手間で続けられます。開発元の歯科医院（以下「開発医院」）での運用と、これから使い始める医院におすすめの始め方をまとめました。</p>
+        </div>
+
+        <!-- 事例A -->
+        <div class="card">
+            <h2>事例A　開発医院での毎日の運用</h2>
+            <p>開発医院では、入力の担当とタイミングを次の 3 つに分けています。</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>分類</th><th>対象</th><th>入力のしかた</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td rowspan="3"><strong>1日1回まとめて入力するもの</strong></td><td>麻酔薬のアンプル（劇物）</td><td>アンプル単位で数え、1日1回まとめて出庫します。</td></tr>
+                        <tr><td>院内処方の投薬剤</td><td>院内処方があった日は、1日1回まとめて出庫します。薬の種類と量は、レセコンで確認します。</td></tr>
+                        <tr><td>受付で販売する物（歯ブラシなど）</td><td>レセコンや日計表を見ながら、1日1回まとめて「受付販売」に記録します。受付販売の記録がそのまま出庫になります。</td></tr>
+                        <tr><td><strong>使った人がその場で入力するもの</strong></td><td>診療で使う物品</td><td>物品を出庫する人が、それぞれ出庫を入力します。</td></tr>
+                        <tr><td><strong>担当者が行うもの</strong></td><td>発注・入庫</td><td>担当者が発注し、商品が届いたら入庫します。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>発注が「特定のスタッフ頼み」になりません</h3>
+            <ul>
+                <li>最低在庫数を下回った商品は「在庫低下」、0 個の商品は「在庫切れ」として表示されます。分類（発注先）ごとに絞り込んで確認できます。</li>
+                <li>発注した商品には [発注済み] の印を付けられます。</li>
+                <li>そのため、担当者が休みの日でも「発注すべきもの」と「入荷待ちのもの」が誰にでも分かります。</li>
+            </ul>
+
+            <h3>在庫を持たない品も発注できます</h3>
+            <ul>
+                <li>在庫として数えずに、必要なときに都度発注するだけの品は「発注専用品」として登録でき、通常の商品と同じ発注書に載せられます。</li>
+                <li>「在庫を数える商品」と「発注専用品」は、あとからすぐに切り替えられます（Mac 版は「相互移行」、iPhone・iPad 版は 設定 ▸ マスタ管理 ▸ 商品 ⇔ 発注専用品 変換）。<br>※ 商品を発注専用品に切り替えると、その商品の在庫数は消えます。</li>
+            </ul>
+
+            <h3>棚卸しで数を合わせます</h3>
+            <ul>
+                <li>出庫の入力もれ（入力忘れ）は、どうしても起こります。そのため、<strong>週1回〜月1回の棚卸し</strong>をおすすめします。</li>
+                <li>開発医院では、<strong>280 アイテムの棚卸しを職員 1 名が 15 分</strong>で終えています。</li>
+                <li>棚卸しは倉庫（保管場所）ごとに行います。「棚卸し」画面で棚卸し表を出し（PDF で印刷するか、CSV を共有シートで出力します）、それを見ながら現物を数えます。</li>
+                <li>実際の数と違っていた商品は、商品の編集画面で在庫数を直します。変更は履歴に「在庫調整」として記録されます。</li>
+            </ul>
+        </div>
+
+        <!-- 事例B -->
+        <div class="card">
+            <h2>事例B　これから始める医院の始め方（iPad 1 台から）</h2>
+
+            <h3>導入前によくある状況</h3>
+            <ul>
+                <li>棚卸しは Excel で管理しているが、実際の在庫と合っていない。</li>
+                <li>在庫が少なくなったことに気づいた人がホワイトボードに書き、それを見て注文している。</li>
+                <li>毎日在庫を確認する習慣はない。</li>
+                <li>パソコンは Windows で、Mac はない。iPad はある。</li>
+            </ul>
+            <p>このような状況からでも、次の順番で無理なく始められます。</p>
+
+            <h3>ステップ 1　iPad 1 台で始める</h3>
+            <p>iPad 版「Stockage Mobile」だけで、商品の登録・出庫・入庫・発注・受付販売・棚卸しまで、ほぼすべての作業ができます。最初は 1 台で始めるのがおすすめです。</p>
+
+            <h3>ステップ 2　保管場所（倉庫）を決める</h3>
+            <p>在庫を置いている場所を「倉庫」として登録します（設定 ▸ マスタ管理 ▸ 倉庫管理）。受付で販売する物がある場合は、受付の棚を「受付倉庫」に指定します。棚卸しも倉庫ごとに行うので、実際の置き場所に合わせて分けておくと後が楽になります。</p>
+
+            <h3>ステップ 3　商品を登録する（一品ずつでも、CSV でも）</h3>
+            <ul>
+                <li><strong>一品ずつ登録する</strong>：スタッフが iPad で 1 品ずつ登録できます。</li>
+                <li><strong>CSV でまとめて登録する</strong>：iPad 版 1.2.3 以降は、設定 ▸ マスタ管理 ▸ CSVで一括登録 から、テンプレートの書き出しと取り込みができます。テンプレートの列は「品番・品名・分類・仕入先・原価・最低在庫数・倉庫・数量」です。保管場所ごとに現物を数えながら「倉庫」と「数量」の欄に記入し、倉庫ごとに取り込んで構いません。原価と最低在庫数も、分かる範囲で埋めておいてください。</li>
+            </ul>
+            <p>どちらの方法でも構いません。最初は「切れると診療が止まる物」と「高額品」から登録し、慣れてから少しずつ増やすと続けやすくなります。</p>
+
+            <h3>ステップ 4　毎日の入力を「1日1回」から始める</h3>
+            <p>最初は、麻酔薬・投薬剤・受付販売の「1日1回まとめて入力するもの」から始めます。慣れてきたら、物品を使った人がその場で出庫を入力するようにします。</p>
+
+            <h3>ステップ 5　棚卸しで数を補正する</h3>
+            <p>入力もれは必ず出ます。週1回〜月1回の棚卸しで、実際の数に合わせれば十分です。最初のうちは数が合わなくて当たり前です。</p>
+
+            <h3>ステップ 6　すべての端末に広げる</h3>
+            <p>在庫の入力がひととおり終わったら、ほかの iPad にも Stockage Mobile をインストールします。同じ Apple ID（iCloud アカウント）でサインインしている端末であれば、データはすぐに同期されます。</p>
+        </div>
+
+        <!-- よくある質問 -->
+        <div class="card">
+            <h2>よくある質問</h2>
+
+            <div class="faq-item">
+                <h3>Q. 数で管理するものは、毎日すべて出庫の確認が必要ですか？</h3>
+                <p>A. いいえ、毎日すべての品目を確認する必要はありません。開発医院で 1 日 1 回まとめて入力しているのは、麻酔薬（劇物）・院内処方の投薬剤・受付販売の 3 つだけです。それ以外の物品は使った人がその都度入力し、入力もれは週1回〜月1回の棚卸しで補正しています。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q. 薬や物品は受付が毎日まとめて入力し、診療室で使った物は衛生士やスタッフが入力するのですか？</h3>
+                <p>A. 開発医院では、次のように分けています。</p>
+                <ul>
+                    <li>麻酔薬・投薬剤・受付販売：1日1回まとめて入力します（受付販売はレセコンや日計表を見て記録します）。</li>
+                    <li>診療室で使う物品：使った人（衛生士やスタッフ）が、その都度出庫を入力します。</li>
+                    <li>発注と入庫：担当者が行います。</li>
+                </ul>
+                <p>誰が入力するかは医院ごとに決めて構いません。大切なのは「1日1回まとめて入力するもの」と「使った人が入力するもの」を分けておくことです。</p>
+            </div>
+        </div>
+
+        <!-- パソコンと組み合わせて使うときのコツ -->
+        <div class="card">
+            <h2>パソコンと組み合わせて使うときのコツ</h2>
+
+            <h3>Windows パソコン + iPad の場合</h3>
+            <ul>
+                <li>毎日の入力（出庫・入庫・発注・受付販売・棚卸し）は iPad で行います。</li>
+                <li>商品をまとめて登録するときは、iPad から CSV のテンプレートを書き出し、Windows パソコンの Excel で時間のあるときにゆっくり入力します。</li>
+                <li>編集した CSV は、Excel で「CSV UTF-8（コンマ区切り）」として保存します（「CSV（コンマ区切り）」で保存したファイルも読み込めます）。</li>
+                <li>保存した CSV は、iCloud Drive やメール添付など、iPad の「ファイル」アプリで開ける場所に置いてから、iPad で取り込みます。取り込む前に確認画面が表示されるので、内容を確かめてから登録できます。</li>
+            </ul>
+
+            <h3>Mac + iPad の場合</h3>
+            <ul>
+                <li>Mac 版「Stockage」にも「CSVインポート」があり、テンプレートを保存して Numbers や Excel で入力し、そのまま Mac から取り込めます。</li>
+                <li>開発医院では、発注書の作成や商品の見直しは Mac で、診療中の出庫・入庫・受付販売の入力は iPad で行っています。同じ Apple ID（iCloud アカウント）の端末どうしで、データは自動的に同期されます。</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <p>より詳しい運用の進め方は、アプリに同梱の「はじめかたガイド」（PDF）の「Stockage で回す 1 週間（運用の型）」の章をご覧ください（Mac 版はサイドバー下部の「はじめかたガイド」、iPhone・iPad 版は 設定 ▸ はじめかたガイド から開けます）。</p>
+        </div>
+
+        <footer>
+            <p><a href="./">← トップへ戻る</a></p>
+            <p><a href="./support">サポート</a> ・ <a href="./privacy">プライバシーポリシー</a></p>
+            <p>Copyright &copy; 2026 Stockage開発チーム. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
